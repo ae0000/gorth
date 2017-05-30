@@ -1,0 +1,20 @@
+language: go
+
+script:
+    - go vet ./...
+    - go test -v ./...
+
+go:
+  - 1.7
+  - tip
+
+services:
+  - mysql
+
+before_install:
+  - mysql -e 'CREATE DATABASE gorth_test;'
+
+env:
+	- GORTH_TEST_DB_USER=root
+	- GORTH_TEST_DB_USER=
+	- GORTH_TEST_DB_NAME=gorth_test
