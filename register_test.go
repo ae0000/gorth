@@ -30,7 +30,8 @@ func initTests() {
 		panic(fmt.Sprintf("setup failed : %s", err))
 	}
 
-	_, err = db.Exec("TRUNCATE TABLE Users")
+	_, err = db.Exec("DROP TABLE Users")
+	CreateUsersTable()
 
 	if err != nil {
 		panic(fmt.Sprintf("setup failed to truncate Users table : %s", err))
