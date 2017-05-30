@@ -31,11 +31,11 @@ func initTests() {
 	}
 
 	_, err = db.Exec("DROP TABLE Users")
-	CreateUsersTable()
-
 	if err != nil {
-		panic(fmt.Sprintf("setup failed to truncate Users table : %s", err))
+		fmt.Printf("setup failed to truncate Users table : %s", err)
 	}
+
+	CreateUsersTable()
 }
 
 func TestRegister(t *testing.T) {
