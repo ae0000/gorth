@@ -21,7 +21,7 @@ func initTests() {
 	}
 
 	databaseUser := os.Getenv("GORTH_TEST_DB_USER")
-	databasePassword := os.Getenv("GORTH_TEST_DB_USER")
+	databasePassword := os.Getenv("GORTH_TEST_DB_PASSWORD")
 	databaseName := os.Getenv("GORTH_TEST_DB_NAME")
 	err := Setup(
 		"mysql",

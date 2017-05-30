@@ -16,5 +16,5 @@ before_install:
 
 env:
   - GORTH_TEST_DB_USER=root
-  - GORTH_TEST_DB_USER=
+  - GORTH_TEST_DB_PASSWORD=
   - GORTH_TEST_DB_NAME=gorth_test
