@@ -15,6 +15,6 @@ before_install:
   - mysql -e 'CREATE DATABASE gorth_test;'
 
 env:
-  - GORTH_TEST_DB_USER=root
-  - GORTH_TEST_DB_PASSWORD=
-  - GORTH_TEST_DB_NAME=gorth_test
+  - GORTH_TEST_DB_USER="root"
+  - GORTH_TEST_DB_PASSWORD=""
+  - GORTH_TEST_DB_NAME="gorth_test"
