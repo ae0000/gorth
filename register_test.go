@@ -27,7 +27,7 @@ func initTests() {
 		"mysql",
 		fmt.Sprintf("%s:%s@/%s", databaseUser, databasePassword, databaseName))
 	if err != nil {
-		panic("setup failed")
+		panic(fmt.Sprintf("setup failed : %s", err))
 	}
 
 	_, err = db.Exec("TRUNCATE TABLE Users")
