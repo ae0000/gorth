@@ -16,8 +16,6 @@ var db *sql.DB
 func Setup(driverName, dataSourceName string) error {
 	var err error
 
-	fmt.Println("DSN",dataSourceName)
-
 	// Setup the db connection
 	// TODO: implement other db drivers, just mysql at the moment
 	if driverName != "mysql" {
